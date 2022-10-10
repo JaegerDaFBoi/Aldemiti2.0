@@ -131,6 +131,7 @@
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="{{ asset('assets/js/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}">
     </script>
+    <script src="{{ asset('assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
 
     @livewireScripts
 
