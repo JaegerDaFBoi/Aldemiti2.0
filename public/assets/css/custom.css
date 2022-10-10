@@ -1,0 +1,26 @@
+:root {
+    --background-main-color: #151840;
+    --dark-blue-main-color: #0814C2;
+    --light-blue-main-color: #0091F5;
+    --light-orange-main-color: #F67B16;
+    --dark-red-main-color: #C2430C;
+}
+
+.page-background-color {
+    background-color: var(--background-main-color);
+}
+.content-orange {
+    background-color: var(--light-orange-main-color);
+}
+
+.text-red{
+    color: var(--dark-red-main-color);
+}
+
+.blue-container {
+    background-color: var(--dark-blue-main-color);
+}
+
+.secondary-blue-container {
+    background-color: var(--light-blue-main-color);
+}
