@@ -24,7 +24,7 @@
                                 </div>
                                 <label for="password">Contraseña</label>
                                 <div class="mb-3">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password"  aria-describedby="password-addon" required autocomplete="current-password" />
+                                    <input type="password" name="password" id="password" class="form-control"  aria-describedby="password-addon" required autocomplete="current-password" />
                                 </div>
                                 <div class="form-check form-switch">
                                     <input type="checkbox" name="remember_me" id="remember_me" class="form-check-input" checked="">

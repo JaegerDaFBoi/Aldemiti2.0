@@ -19,6 +19,7 @@
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" />
     <link id="pagestyle" rel="stylesheet" href="{{ asset('assets/css/soft-ui-dashboard.css') }}" />
 
     {{-- <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.2.2-dist/css/bootstrap.min.css') }}" /> --}}
@@ -30,7 +31,7 @@
     <link rel="stylesheet" href="{{ asset('assets/js/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}" />
     <link rel="stylesheet"
         href="{{ asset('assets/js/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" />
+    
     @livewireStyles
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -43,13 +44,12 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg content-orange top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4"
                     style="border-radius: 60px">
-                    <div class="container-fluid pe-0">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-4 d-flex justify-content-start">
                                 <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 justify-items-center"
                                     href="{{ url('/dashboard') }}">
-                                    <img src="{{ asset('assets/img/avocado.jpg') }}" alt="logoaldemiti"
-                                        class="rounded-circle" width="20%" height="auto">
+                                    <img src="{{ asset('assets/img/logoaldemiti.png') }}" alt="logoaldemiti" width="100%" height="100%">   
                                 </a>
                                 <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
@@ -61,17 +61,13 @@
                                     </span>
                                 </button>
                             </div>
-                            <div class="col-md-4 d-flex justify-content-center flex-wrap align-content-center">
-                                <h2 class="font-weight-bolder display-6 ms-lg-0 ms-3 text-red justify-self-center">
-                                    ALDEMITI</h2>
-                            </div>
-                            <div class="col-md-4 d-flex justify-content-center flex-wrap align-content-center">
+                            <div class="col-md-8 d-flex justify-content-end flex-wrap align-content-center">
                                 <div class="collapse navbar-collapse" id="navigation">
                                     <ul class="navbar-nav mx-auto ms-xl-auto me-xl-7">
                                         @if (Route::has('login'))
                                         @auth
                                         <li class="nav-item">
-                                            <a class="nav-link me-2 text-red" href="{{ url('/dashboard') }}">
+                                            <a class="nav-link me-2" href="{{ url('/dashboard') }}">
                                                 <i class="ni ni-box-2 opacity-6 text-dark me-1"></i>
                                                 Dashboard
                                             </a>
