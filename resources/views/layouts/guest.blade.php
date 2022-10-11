@@ -14,16 +14,18 @@
     <link rel="stylesheet" href="{{ asset('dist/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- icheck bootstrap -->
     <link rel="stylesheet" href="{{ asset('dist/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+    
     <!-- Theme -->
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('dist/css/custom.css') }}">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="hold-transition layout-top-nav">
-    <div class="wrapper">
-        <nav class="main-header navbar navbar-expand navbar-gray-dark navbar-dark">
+<body class="hold-transition layout-top-nav dark-mode">
+    <div class="wrapper bg-gray-200">
+        <nav class="main-header navbar navbar-expand navbar-gray-dark navbar-dark ">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{{ url('/dashboard') }}" class="brand-link">
@@ -56,7 +58,18 @@
                 @endif
             </ul>
         </nav>
-        
+        <div class="content-wrapper">
+
+            @yield('content')
+
+        </div>
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2022 <a href="">Servicio Nacional de Aprendizaje SENA</a>.</strong>
+            Todos los derechos reservados.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 2.0
+            </div>
+        </footer>
     </div>
 
     <!-- jQuery -->
