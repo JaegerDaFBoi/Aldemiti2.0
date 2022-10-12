@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="{{ asset('dist/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- icheck bootstrap -->
     <link rel="stylesheet" href="{{ asset('dist/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('dist/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme -->
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 
@@ -31,8 +34,7 @@
         <nav class="main-header navbar navbar-expand navbar-gray-dark navbar-dark ">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-                            class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{ url('/dashboard') }}" class="nav-link">Inicio</a>
@@ -68,7 +70,7 @@
             <div class="sidebar">
                 <div class="form-inline">
                     <div class="input-group" data-widget="sidebar-search">
-                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Buscar"
                             aria-label="Search">
                         <div class="input-group-append">
                             <button class="btn btn-sidebar">
@@ -78,7 +80,8 @@
                     </div>
                 </div>
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="nav-icon fas fa-truck-moving"></i>
@@ -89,9 +92,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('proveedor.index') }}" class="nav-link">
                                         <i class="fas fa-address-book"></i>
                                         <p>Lista de Proveedores</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('proveedor.create') }}" class="nav-link">
+                                        <i class="fas fa-user-plus"></i>
+                                        <p>Registrar Proveedor</p>
                                     </a>
                                 </li>
                             </ul>
@@ -105,12 +114,12 @@
             <section class="content-header mb-2">
                 @yield('content-header')
             </section>
-            <section class="content mb-2">
+            <section class="content">
                 @yield('content')
             </section>
         </div>
 
-        <footer class="main-footer fixed-bottom">
+        <footer class="main-footer">
             <strong>Copyright &copy; 2022 <a href="">Servicio Nacional de Aprendizaje SENA</a>.</strong>
             Todos los derechos reservados.
             <div class="float-right d-none d-sm-inline-block">
@@ -122,9 +131,24 @@
     <script src="{{ asset('dist/plugins/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap 4 -->
     <script src="{{ asset('dist/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- DataTables -->
+    <script src="{{ asset('dist/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/jszip/jszip.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/pdfmake/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/pdfmake/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('dist/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('dist/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
     @livewireScripts
+
+    @stack('js')
 </body>
 
 </html>

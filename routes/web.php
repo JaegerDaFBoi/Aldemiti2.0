@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IngresoController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\RetiroController;
+use App\Http\Controllers\VentaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +55,9 @@ Route::middleware([
             Route::controller(ProveedorController::class)->group(function () {
                 Route::get('/index', 'index')->name('index');
                 Route::get('/crearproveedor', 'create')->name('create');
+                Route::post('/guardar', 'store')->name('store');
                 Route::get('/{proveedor}/editar', 'edit')->name('edit');
+                Route::put('/{proveedor}/actualizar', 'update')->name('update');
                 Route::delete('/{proveedor}/eliminar', 'destroy')->name('delete');
             });
         });
