@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\RetiroController;
 use App\Http\Controllers\VentaController;
+use App\Http\Controllers\CategoriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,4 +70,7 @@ Route::middleware([
 
     Route::get('/ventas/index', [VentaController::class, 'index'])->name('ventas.index');
     Route::get('/ventas/create', [VentaController::class, 'create'])->name('ventas.create');
+
+    Route::get('/categorias/index', [CategoriaController::class, 'index'])->name('categorias.index');
+    Route::delete('/categorias/{categoria}/eliminar', [CategoriaController::class, 'destroy'])->name('categorias.delete');
 });
