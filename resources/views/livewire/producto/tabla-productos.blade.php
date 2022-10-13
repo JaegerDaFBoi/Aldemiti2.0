@@ -116,7 +116,7 @@
                                             <div class="col-md-6">
                                                 <label for="cantidad">Cantidad a Ingresar</label>
                                                 <input type="number" class="form-control" name="cantidad"
-                                                    wire:model='cantidad' wire:change='calcularValorTotal'>
+                                                    wire:model='cantidadIngreso' wire:change='calcularValorTotal'>
                                                 @if ($valortotal != 0)
                                                     <label>Valor Total</label>
                                                     <br>

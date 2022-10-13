@@ -16,7 +16,7 @@ class TablaProductos extends Component
     public $formularioRetiro = false;
     public $productoSeleccionado;
     public $fechaIngreso;
-    public $cantidad;
+    public $cantidadIngreso;
     public $valortotal;
     public $fechaRetiro;
     public $cantidadRetiro;
@@ -55,7 +55,7 @@ class TablaProductos extends Component
     public function calcularValorTotal()
     {
         if ($this->formularioIngreso) {
-            $this->valortotal = $this->productoSeleccionado->valor_compra * $this->cantidad;
+            $this->valortotal = $this->productoSeleccionado->valor_compra * $this->cantidadIngreso;
         } elseif ($this->formularioRetiro) {
             $this->valorretiro = $this->productoSeleccionado->valor_compra * $this->cantidadRetiro;
         }
@@ -65,10 +65,11 @@ class TablaProductos extends Component
     
     public function guardarIngreso()
     {
+        
         $ingreso = new Ingreso();
         $ingreso->fecha_ingreso = $this->fechaIngreso;
         $ingreso->fk_producto = $this->productoSeleccionado->id;
-        $ingreso->cantidad = $this->cantidad;
+        $ingreso->cantidad = $this->cantidadIngreso;
         $ingreso->valor_total = $this->valortotal;
         $ingreso->save();
         $producto = $this->productoSeleccionado;
