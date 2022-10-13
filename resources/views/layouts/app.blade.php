@@ -120,6 +120,18 @@
                                         <p>Categorias de productos</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('inventario.index') }}" class="nav-link">
+                                        <i class="fas fa-boxes"></i>
+                                        <p>Inventario de productos</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('inventario.create') }}" class="nav-link">
+                                        <i class="fas fa-cart-plus"></i>
+                                        <p>Registrar Producto</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
