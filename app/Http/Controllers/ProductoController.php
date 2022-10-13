@@ -50,7 +50,7 @@ class ProductoController extends Controller
                 'unidadMedida' => 'nullable',
                 'valorCompra' => 'required|numeric',
                 'valorVenta' => 'required|numeric',
-                'stockInventario' => 'required|numeric',
+                'stockInventario' => 'required|numeric'
             ],
             [
                 'categoriaProducto.required' => 'Debe seleccionar una categoria de producto',
@@ -59,10 +59,10 @@ class ProductoController extends Controller
                 'nombreProducto.required' => 'El campo Nombre de producto es requerido',
                 'valorCompra.required' => 'El campo Valor de producto es requerido',
                 'valorCompra.numeric' => 'El campo Valor de producto solo debe tener numeros',
-                'valorVenta.required' => 'El campo Valor de producto es requerido',
-                'valorVenta.numeric' => 'El campo Valor de producto solo debe tener numeros',
+                'valorVenta.required' => 'El campo Valor de venta es requerido',
+                'valorVenta.numeric' => 'El campo Valor de venta solo debe tener numeros',
                 'stockInventario.required' => 'El campo Cantidad en inventario es requerido',
-                'stockInventario.numeric' => 'El campo Cantidad en inventario solo debe tener numeros',
+                'stockInventario.numeric' => 'El campo Cantidad en inventario solo debe tener numeros'
             ]
         );
         $producto = new Producto();
@@ -97,7 +97,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        return view('inventario.edit', compact('producto'));
     }
 
     /**
@@ -120,6 +120,7 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        //
+        $producto->delete();
+        return Redirect::route('inventario.index')->with("message", "Producto eliminado con exito");
     }
 }

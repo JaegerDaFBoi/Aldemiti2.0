@@ -52,7 +52,7 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <a href="{{ route('inventario.edit', $producto) }}">
-                                                            <button type="button" class="btn btn-sm btn-warning">
+                                                            <button type="button" class="btn btn-sm bg-gradient-warning">
                                                                 <i class="fas fa-edit"></i>
                                                             </button>
                                                         </a>
@@ -62,7 +62,7 @@
                                                             method="post">
                                                             @method('DELETE')
                                                             @csrf
-                                                            <button type="submit" class="btn btn-sm btn-danger">
+                                                            <button type="submit" class="btn btn-sm bg-gradient-danger">
                                                                 <i class="fas fa-trash-alt"></i>
                                                             </button>
                                                         </form>
@@ -72,13 +72,13 @@
                                             <td>
                                                 <div class="row">
                                                     <div class="col-sm-4">
-                                                        <button type="submit" class="btn btn-sm btn-info"
+                                                        <button type="submit" class="btn btn-sm bg-gradient-info"
                                                             wire:click='mostrarFormulario({{ $producto->id }})'>
                                                             <i class="fas fa-plus"></i>
                                                         </button>
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <button type="submit" class="btn btn-sm btn-danger"
+                                                        <button type="submit" class="btn btn-sm bg-gradient-orange"
                                                             wire:click='mostrarFormularioRetiro({{ $producto->id }})'>
                                                             <i class="fas fa-minus-square"></i>
                                                         </button>
