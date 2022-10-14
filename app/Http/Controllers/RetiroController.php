@@ -14,7 +14,9 @@ class RetiroController extends Controller
      */
     public function index()
     {
-        //
+        return view('retiros.index', [
+            'retiros' => Retiro::all()
+        ]);
     }
 
     /**

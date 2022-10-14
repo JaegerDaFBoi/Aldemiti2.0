@@ -6,6 +6,15 @@
                     <h3>Lista de Productos</h3>
                 </div>
                 <div class="card-body bg-gradient-gray">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="row">
                         @if ($formularioIngreso || $formularioRetiro)
                             <div class="col-md-9">
@@ -52,7 +61,8 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <a href="{{ route('inventario.edit', $producto) }}">
-                                                            <button type="button" class="btn btn-sm bg-gradient-warning">
+                                                            <button type="button"
+                                                                class="btn btn-sm bg-gradient-warning">
                                                                 <i class="fas fa-edit"></i>
                                                             </button>
                                                         </a>
@@ -62,7 +72,8 @@
                                                             method="post">
                                                             @method('DELETE')
                                                             @csrf
-                                                            <button type="submit" class="btn btn-sm bg-gradient-danger">
+                                                            <button type="submit"
+                                                                class="btn btn-sm bg-gradient-danger">
                                                                 <i class="fas fa-trash-alt"></i>
                                                             </button>
                                                         </form>

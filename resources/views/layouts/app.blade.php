@@ -34,7 +34,8 @@
         <nav class="main-header navbar navbar-expand navbar-gray-dark navbar-dark ">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                            class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{ url('/dashboard') }}" class="nav-link">Inicio</a>
@@ -85,7 +86,7 @@
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="nav-icon fas fa-truck-moving"></i>
-                                <p>
+                                <p style="font-size: 1.5em">
                                     Proveedores
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
@@ -108,7 +109,7 @@
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="fas fa-store"></i>
-                                <p>
+                                <p style="font-size: 1.5em">
                                     Productos
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
@@ -130,6 +131,52 @@
                                     <a href="{{ route('inventario.create') }}" class="nav-link">
                                         <i class="fas fa-cart-plus"></i>
                                         <p>Registrar Producto</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <p style="font-size: 1.5em">
+                                    Ventas
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ventas.index') }}" class="nav-link">
+                                        <i class="fas fa-receipt"></i>
+                                        <p>Ventas realizadas</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('ventas.create') }}" class="nav-link">
+                                        <i class="fas fa-wallet"></i>
+                                        <p>Registrar Venta</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-exchange-alt"></i>
+                                <p class="align-items-center" style="font-size: 1.5em">
+                                    Movimientos
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ingresos.index') }}" class="nav-link">
+                                        <i class="fas fa-cart-plus"></i>
+                                        <p>Ingresos al inventario</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('retiros.index') }}" class="nav-link">
+                                        <i class="fas fa-cart-arrow-down"></i>
+                                        <p>Retiros de productos</p>
                                     </a>
                                 </li>
                             </ul>
