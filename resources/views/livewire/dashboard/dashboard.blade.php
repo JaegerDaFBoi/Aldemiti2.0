@@ -28,7 +28,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <a href="{{ route('inventario.create') }}" class="btn btn-block bg-gradient-warning">
+                            <a href="{{ route('inventario.index') }}" class="btn btn-block bg-gradient-warning">
                                 <i class="fas fa-boxes"></i> Ir a Inventario de Productos
                             </a>
                         </div>
